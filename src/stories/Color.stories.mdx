@@ -1,0 +1,292 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Foundation/Color & Shadow" />
+
+<style>{`
+  body{
+    font-family: Montserrat;
+  }
+    .heading{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    color: #333333;
+  }
+  .heading2{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: #333333;
+    margin: 25px 0 15px 0;
+  }
+  .subheading {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C7C7C;
+  }
+  .border-bottom{
+    border-bottom: 1px solid #858585;
+    padding-bottom: 10px;
+  }
+
+  .box{
+    margin: 15px 0 30px 0;
+  }
+  .flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex > div{
+    margin: 0 15px 15px 0;
+  }
+
+  .color-box{
+    width: 200px;
+  }
+  .color-swatches{
+    width: 200px;
+    height: 90px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px 4px 0px 0px;
+  }
+  .color-info{
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .color-info .title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+  }
+  .color-info .subtitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333333;
+    opacity: 0.8;
+  }
+
+  .primary{
+    background: #003366;
+  }
+  .secondary{
+    background: #F8CA0F;
+  }
+  .success{
+    background: #29CA40;
+  }
+  .blue-info{
+    background: #39A3DF;
+  }
+  .warning{
+    background: #FE891E;
+  }
+  .danger{
+    background: #F95F59;
+  }
+  .muted{
+    background: #FBE074;
+  }
+  .white{
+    background: #ffffff;
+  }
+  .black{
+    background: #333333;
+  }
+  .gray{
+    background: #7C7C7C;
+  }
+  .soft-gray{
+    background: #B9B9B9;
+  }
+  .success-typo{
+    background: #23A937;
+  }
+  .info-typo{
+    background: #2292D3;
+  }
+  .warning-typo{
+    background: #F47601;
+  }
+  .danger-typo{
+    background: #F8403A;
+  }
+  .light{
+    background: #FAFAFA;
+  }
+`}</style>
+
+<div className="heading">Color Guideline</div>
+<div className="subheading border-bottom">
+  At Hukumonline, colors play an important role when we are working with a
+  product, a service or a space. The right combination of colors can influence
+  how users feel, think, and behave.
+</div>
+<div className="heading2">Main</div>
+<div className="subheading">
+  Hukumonline’s color palette has been created to reflect the spirit of our brand. Blue is used across all our communication as an essential element of branding. 
+</div>
+
+<div className="flex box">
+  <div className="color-box">
+    <div className="color-swatches primary"></div>
+    <div className="color-info">
+      <div className="title">Primary</div>
+      <div className="subtitle">Hex: #003366</div>
+      <div className="subtitle">RGB: 0, 51, 102</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches secondary"></div>
+    <div className="color-info">
+      <div className="title">Secondary</div>
+      <div className="subtitle">Hex: #F8CA0F</div>
+      <div className="subtitle">RGB: 248, 202, 15</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches success"></div>
+    <div className="color-info">
+      <div className="title">Success</div>
+      <div className="subtitle">Hex: #29CA40</div>
+      <div className="subtitle">RGB: 41, 202, 64</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches blue-info"></div>
+    <div className="color-info">
+      <div className="title">Blue Info</div>
+      <div className="subtitle">Hex: #39A3DF</div>
+      <div className="subtitle">RGB: 57, 163, 123</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches warning"></div>
+    <div className="color-info">
+      <div className="title">Warning</div>
+      <div className="subtitle">Hex: #FE891E</div>
+      <div className="subtitle">RGB: 254, 137, 30</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches danger"></div>
+    <div className="color-info">
+      <div className="title">Danger</div>
+      <div className="subtitle">Hex: #F95F59</div>
+      <div className="subtitle">RGB: 249, 95, 89</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches muted"></div>
+    <div className="color-info">
+      <div className="title">Muted</div>
+      <div className="subtitle">Hex: #FBE074</div>
+      <div className="subtitle">RGB: 119, 119, 119</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches white"></div>
+    <div className="color-info">
+      <div className="title">White</div>
+      <div className="subtitle">Hex: #FFFFFF</div>
+      <div className="subtitle">RGB: 255, 255, 255</div>
+    </div>
+  </div>
+</div>
+
+<div className="heading2">Typography</div>
+<div className="subheading">
+  Color to highlight neutral messages, a complementary color for Blue as well.
+</div>
+
+<div className="flex box">
+  <div className="color-box">
+    <div className="color-swatches black"></div>
+    <div className="color-info">
+      <div className="title">Black</div>
+      <div className="subtitle">Hex: #333333</div>
+      <div className="subtitle">RGB: 51, 51, 51</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches gray"></div>
+    <div className="color-info">
+      <div className="title">Gray</div>
+      <div className="subtitle">Hex: #7C7C7C</div>
+      <div className="subtitle">RGB: 248, 202, 15</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches gray-soft"></div>
+    <div className="color-info">
+      <div className="title">Gray</div>
+      <div className="subtitle">Hex: #B9B9B9</div>
+      <div className="subtitle">RGB: 124, 124, 124</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches success-typo"></div>
+    <div className="color-info">
+      <div className="title">Success</div>
+      <div className="subtitle">Hex: #23A937</div>
+      <div className="subtitle">RGB: 35, 169, 55</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches info-typo"></div>
+    <div className="color-info">
+      <div className="title">Info</div>
+      <div className="subtitle">Hex: #2292D3</div>
+      <div className="subtitle">RGB: 34, 146, 211</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches warning-typo"></div>
+    <div className="color-info">
+      <div className="title">Warning</div>
+      <div className="subtitle">Hex: #F47601</div>
+      <div className="subtitle">RGB: 254, 137, 30</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches danger-typo"></div>
+    <div className="color-info">
+      <div className="title">Danger</div>
+      <div className="subtitle">Hex: #F8403A</div>
+      <div className="subtitle">RGB: 248, 64, 58</div>
+    </div>
+  </div>
+
+  <div className="color-box">
+    <div className="color-swatches light"></div>
+    <div className="color-info">
+      <div className="title">Light</div>
+      <div className="subtitle">Hex: #FAFAFA</div>
+      <div className="subtitle">RGB: 250, 250, 250</div>
+    </div>
+  </div>
+</div>

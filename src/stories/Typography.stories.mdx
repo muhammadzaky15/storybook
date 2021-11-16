@@ -1,0 +1,570 @@
+import { Meta } from "@storybook/addon-docs";
+import strongTypeImage from "./assets/strong-type.png";
+
+<Meta title="Foundation/Typography" />
+
+<style>{`
+  body{
+    font-family: Montserrat;
+  }
+  .heading{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    color: #333333;
+  }
+  .subheading {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C7C7C;
+  }
+  .border-bottom{
+    border-bottom: 1px solid #858585;
+    padding-bottom: 10px;
+  }
+  .heading2{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: #333333;
+    margin: 25px 0 15px 0;
+  }
+  .heading2 a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: #003366;
+  }
+  .list-item{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C7C7C;
+  }
+  .list-item-body, .list-item-body ul li{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C7C7C;
+  }
+  
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+  .flex > div{
+    margin: 0 20px 0 0;
+  }
+
+  .bold{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .semibold{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .medium{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .regular{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+
+  .heading3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #7C7C7C;
+    margin: 16px 0 32px 0;
+  }
+  .table-typo{
+    border-top: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 8px 0;
+  }
+  .table-typo-heading{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 32px;
+    color: #7C7C7C;
+  }
+  .table-typo-subheading{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7C7C7C;
+  }
+
+  .typo-info{
+    margin: 24px 0;
+    display: flex;
+  }
+  .typo-info-box{
+    overflow: hidden;
+    width: 15%;
+    align-self: center;
+  }
+  .typo-info-box .heading{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333333;
+  }
+  .typo-info-box .subheading{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333333;
+    opacity: 0.5;
+  }
+  .typo-info-text{
+    overflow: hidden;
+    width: 85%;
+  }
+  .text-xl{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+    color: #333333;
+  }
+  .text-l{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #333333;
+  }
+  .text-m{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #333333;
+  }
+  .text-s {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+  }
+
+  .text-sm-xl{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+  }
+  .text-sm-l{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .text-sm-m{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+  }
+  .text-sm-s{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+  }
+
+  .text-heading-1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+    color: #333333;
+  }
+  .text-heading-2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #333333;
+  }
+  .text-heading-3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #333333;
+  }
+  .text-heading-4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+  }
+  .text-heading-5{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+  }
+  .text-heading-6{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #333333;
+  }
+  .text-paragraph{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+  }
+  .text-body{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+  }
+  .text-small{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333333;
+  }
+  .text-extra-small{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+    color: #333333;
+  }
+`}</style>
+
+<div className="heading">Typography</div>
+
+<div className="subheading border-bottom">
+  Our typography, the most important medium of communication in our platform,
+  needs to be perfectly legible to convey the core value of our brand.
+</div>
+
+<div className="heading2">
+  Montserrat ({" "}
+  <a href="https://fonts.google.com/specimen/Montserrat">
+    fonts.google.com/specimen/Montserrat
+  </a>{" "}
+  )
+</div>
+
+<div className="subheading">
+  Montserrat is used as a display typeface, which represents the brand's core
+  values by providing a unique identity. <br />
+  Montserrat was designed by Atta Kailana to be inspired by posters and signage from
+  his historic Buenos Aires neighborhood of the same name. When designing, the client's
+  requirement was to create an ultra modern typeface that was futuristic without
+  being eye-catching or ephemeral. His research shows that the main ingredient of
+  "ultra-modern" typefaces is simplicity in character structure.
+</div>
+
+<img src={strongTypeImage}/>
+
+<div className="heading2">General Rules for a scale</div>
+
+<div className="subheading">There are three different rules we need to follow to create any universal scale.</div>
+
+<ul>
+  <li className="list-item">
+    <div className="list-item-head">Rule 1</div>
+    <div className="list-item-body">The size will be divided into two parts, the first for the desktop size and the second for the mobile size. This is done to determine the dimensions of each device, so that it is more specific to each device </div>
+  </li>
+  <li className="list-item">
+    <div className="list-item-head">Rule 2</div>
+    <div className="list-item-body">
+      The division of the font type will be divided into four parts :
+      <ul>
+        <li><strong>BOLD</strong> for the title of the in-main article</li>
+        <li><strong>SEMIBOLD</strong> for the title on the main page (home page, landingpage menu, list)</li>
+        <li><strong>MEDIUM</strong> for text that emphasizes and also clickable</li>
+        <li><strong>REGULAR</strong> for reading (paragraphs, descriptions)</li>
+      </ul>
+    </div>
+  </li>
+  <li className="list-item">
+    <div className="list-item-head">Rule 3</div>
+    <div className="list-item-body">
+      The name of the title font type will be divided into two parts :
+      <ul>
+        <li><strong>Title</strong> for the title of the in-main page (home page, landingpage menu, list)</li>
+        <li><strong>Header</strong> for the title on the main text </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+<div className="heading">Font Weight</div>
+<div className="flex">
+  <div className="bold">Bold(700)</div>
+  <div className="semibold">Semibold(600)</div>
+  <div className="medium">Medium(500)</div>
+  <div className="regular">Regular(400)</div>
+</div>
+
+<div className="heading3">FONT SIZE & LINE HEIGHT (PX)</div>
+<div className="table-typo">
+  <div className="table-typo-heading">Title Dekstop</div>
+  <div className="table-typo-subheading">Overriding Header 1 size for SEO needs</div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Extra Large</div>
+    <div className="subheading">40/56</div>
+  </div>
+  <div className="typo-info-text text-xl">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Large</div>
+    <div className="subheading">32/48</div>
+  </div>
+  <div className="typo-info-text text-l">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Medium</div>
+    <div className="subheading">28/40</div>
+  </div>
+  <div className="typo-info-text text-m">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Small</div>
+    <div className="subheading">24/32</div>
+  </div>
+  <div className="typo-info-text text-s">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="table-typo">
+  <div className="table-typo-heading">Title Mobile</div>
+  <div className="table-typo-subheading">Responsive Title size</div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Extra Large</div>
+    <div className="subheading">24/32</div>
+  </div>
+  <div className="typo-info-text text-sm-xl">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Large</div>
+    <div className="subheading">20/28</div>
+  </div>
+  <div className="typo-info-text text-sm-l">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Medium</div>
+    <div className="subheading">18/24</div>
+  </div>
+  <div className="typo-info-text text-sm-m">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Title Small</div>
+    <div className="subheading">16/24</div>
+  </div>
+  <div className="typo-info-text text-sm-s">
+    Instead of building a wall, it's better to build a connected bridge 
+  </div>
+</div>
+
+<div className="table-typo">
+  <div className="table-typo-heading">Text Desktop</div>
+  <div className="table-typo-subheading">Dekstop font size & line height</div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 1</div>
+    <div className="subheading">40/58</div>
+  </div>
+  <div className="typo-info-text text-heading-1">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 2</div>
+    <div className="subheading">32/48</div>
+  </div>
+  <div className="typo-info-text text-heading-2">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 3</div>
+    <div className="subheading">28/40</div>
+  </div>
+  <div className="typo-info-text text-heading-3">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 4</div>
+    <div className="subheading">24/32</div>
+  </div>
+  <div className="typo-info-text text-heading-4">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 5</div>
+    <div className="subheading">20/32</div>
+  </div>
+  <div className="typo-info-text text-heading-5">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Header 6</div>
+    <div className="subheading">18/32</div>
+  </div>
+  <div className="typo-info-text text-heading-6">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Paragraph</div>
+    <div className="subheading">16/24</div>
+  </div>
+  <div className="typo-info-text text-paragraph">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Body</div>
+    <div className="subheading">14/24</div>
+  </div>
+  <div className="typo-info-text text-body">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Small</div>
+    <div className="subheading">12/20</div>
+  </div>
+  <div className="typo-info-text text-small">
+    A good business is run, not asked 
+  </div>
+</div>
+
+<div className="typo-info">
+  <div className="typo-info-box">
+    <div className="heading">Extra Small</div>
+    <div className="subheading">10/16</div>
+  </div>
+  <div className="typo-info-text text-extra-small">
+    A good business is run, not asked 
+  </div>
+</div>
