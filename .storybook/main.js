@@ -38,7 +38,7 @@ module.exports = {
           }
         }
       ],
-      include: path.resolve(__dirname, '../'),
+      include: path.resolve(__dirname, '../src'),
     })
     return config
   }
