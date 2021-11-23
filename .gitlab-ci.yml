@@ -1,0 +1,41 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  REGISTRY_HOST: registry.hukumonline.com
+  IMAGE_NAME: hol/hol-dls-js
+  BUILD_IMAGE: $REGISTRY_HOST/$IMAGE_NAME:build-$CI_PIPELINE_ID
+  TEST_IMAGE: $REGISTRY_HOST/$IMAGE_NAME:$CI_COMMIT_REF_NAME
+  DEVELOP_IMAGE: $REGISTRY_HOST/$IMAGE_NAME:develop
+  RELEASE_IMAGE: $REGISTRY_HOST/$IMAGE_NAME:latest
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  image: docker:19.03.8
+  services:
+    - docker:dind
+  only:
+    - master
+  script:
+    - echo $BUILD_IMAGE
+    - docker info
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $REGISTRY_HOST
+    - docker build --tag="$BUILD_IMAGE" .
+    - docker push $BUILD_IMAGE
+
+deploy:production:
+  stage: deploy
+  image: cdrx/rancher-gitlab-deploy
+  services:
+    - docker:dind
+  only:
+    - master
+    - develop
+  script:
+    - echo $BUILD_IMAGE
+    - upgrade --stack design-system --service hol-dls-js --new-image $BUILD_IMAGE --start-before-stopping --finish-upgrade
