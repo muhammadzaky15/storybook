@@ -1,6 +1,4 @@
 import React from "react";
-import "../index.css"
-
 import { Text } from "./Text";
 
 export default {
