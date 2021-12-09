@@ -1,0 +1,10 @@
+{
+  "name": "hol-storybook",
+  "main": "bundles/bundle.js",
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
